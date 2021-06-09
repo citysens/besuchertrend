@@ -1,0 +1,32 @@
+# ingore typical development folders and files
+.idea
+package-lock.json
+
+# ignore the htdocs symlink on the root directory
+/htdocs
+
+# ingore composer dependencies
+/project/libExt/vendor
+
+# ignore the logs and the tmp folders of the project
+/logs/
+/tmp/
+
+# ignore the local config
+project/config/config.inc.php
+
+# ingore the huuuuge node_modles folder
+/node_modules
+
+# no css and js files generated (minified or sass) by the deploy script (gulp).
+project/htdocs/static/js/dist/*.js
+project/htdocs/static/css/dist/*.css
+project/htdocs/static/css/project.css
+project/htdocs/static/css/project.css.map
+project/htdocs/static/css/base.css
+project/htdocs/static/css/base.css.map
+project/htdocs/static/css/.sass-cache/
+/project/htdocs/static/css/includes/.sass-cache/
+
+project/htdocs/framework-static/
+project/htdocs/.htaccess

@@ -1,0 +1,232 @@
+/******************************************
+* Default Colors
+*******************************************/
+
+$font-family: 'Roboto', sans-serif;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+$text-color: #333;
+$red: #f2645a;
+$red-dark: #bf4f47;
+$black: #000;
+$offblack: #333;
+
+$grey-7: #7d7d7d;
+$grey-b: #bbb;
+$grey-c: #ccc;
+$grey-d: #ddd;
+$grey-e: #eee;
+$white: #fff;
+$yellow: #e5f04c;
+$genannt-yellow: #ffff00;
+
+$default-font: 'Roboto', sans-serif;
+
+$padding-top: 30px;
+$header-height: 25px;
+
+/*************
+* Colors     *
+*************/
+.red {
+    color: $red;
+}
+.grey {
+    color: $grey-7;
+}
+.grey-light {
+    color: $grey-c;
+}
+.white {
+    color: $white;
+}
+
+.relative {
+    position: relative;
+}
+
+
+/********************
+* Main HTML Elements
+*********************/
+html {
+    // Always show the vertical scrollbar
+    overflow-y: scroll;
+}
+
+body {
+    // Default font settings
+    font-family: $font-family;
+    font-weight: $font-weight-normal;
+    color: $text-color;
+}
+
+
+/**************
+* Placeholder
+**************/
+::-webkit-input-placeholder { color: $grey-b; }
+:-moz-placeholder { color: $grey-b; }
+::-moz-placeholder { color: $grey-b; }
+:-ms-input-placeholder { color: $grey-b; }
+
+
+/**************
+* Common      *
+***************/
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.hidden {
+    display:none;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.block-element{
+    display: block;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.move {
+    cursor: move;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+.vertical-center {
+    vertical-align: middle;
+}
+
+.centered-text {
+    text-align: center;
+}
+
+.right-aligned-text {
+    text-align: right;
+}
+
+.small-font {
+    font-size: 0.8em;
+}
+
+.margin-top {
+    margin-top: 40px;
+}
+
+.margin-top-double {
+    margin-top: 80px;
+}
+
+.margin-top-half {
+    margin-top: 20px;
+}
+
+.margin-left {
+    margin-left: 40px;
+}
+
+.margin-left-half {
+    margin-left: 20px;
+}
+
+.margin-right {
+    margin-right: 40px;
+}
+
+.margin-right-half {
+    margin-right: 20px;
+}
+
+.margin-bottom {
+    margin-bottom: 40px;
+}
+
+.margin-bottom-half {
+    margin-bottom: 20px;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.strong{
+    font-weight: $font-weight-bold;
+}
+
+.no-uppercase {
+    text-transform: none;
+}
+
+/***************
+* 404
+*****************/
+.notfound {
+    margin: 0 auto;
+}
+.glitch {
+    color: $offblack;
+    font-size: 100px;
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+}
+@keyframes noise-anim{
+    $steps:20;
+    @for $i from 0 through $steps{
+        #{percentage($i*(1/$steps))}{
+            clip:rect(random(100)+px,9999px,random(100)+px,0);
+        }
+    }
+}
+.glitch:after{
+    content:attr(data-text);
+    position:absolute;
+    left:2px;
+    text-shadow:-1px 0 red;
+    top:0;
+    color: $offblack;
+    background: $white;
+    overflow:hidden;
+    clip:rect(0,900px,0,0);
+    animation:noise-anim 2s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2{
+    $steps:20;
+    @for $i from 0 through $steps{
+        #{percentage($i*(1/$steps))}{
+            clip:rect(random(100)+px,9999px,random(100)+px,0);
+        }
+    }
+}
+.glitch:before{
+    content:attr(data-text);
+    position:absolute;
+    left:-2px;
+    text-shadow:1px 0 blue;
+    top:0;
+    color: $offblack;
+    background: $white;
+    overflow:hidden;
+    clip:rect(0,900px,0,0);
+    animation:noise-anim-2 3s infinite linear alternate-reverse;
+}

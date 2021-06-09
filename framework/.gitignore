@@ -1,0 +1,10 @@
+.idea
+
+/tmp/tpl_c/*
+/tmp/s_cache/*
+/tmp/uploads/*
+
+/htdocsSym/framework-static/js/*.min.js
+/htdocsSym/framework-static/js/dist/*.min.js
+/libExt/vendor/
+

@@ -1,0 +1,24 @@
+{
+  "name": "citysens/pz",
+  "description": "",
+
+  "repositories": [
+    {
+      "type": "vcs",
+      "url":  "https://github.com/citysens/datenhub-api.git"
+    }
+  ],
+
+  "require": {
+    "cortexmedia/datenhubapi": "dev-master"
+  },
+  
+  "config": {
+    "vendor-dir": "project/libExt/vendor"
+  },
+
+  "autoload": {
+    "classmap": ["project/lib/", "project/libExt"]
+  }
+
+}
